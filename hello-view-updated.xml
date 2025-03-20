@@ -1,0 +1,7 @@
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxregistrationform.HelloController">
+  <Label text="Enter your name:"/>
+  <TextField fx:id="nameField"/>
+  <Button text="Submit" onAction="#onSubmitButtonClick"/>
+  <Label fx:id="responseLabel" text=""/>
+</VBox>

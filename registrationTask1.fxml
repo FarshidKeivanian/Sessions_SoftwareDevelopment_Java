@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="mainBox"
+      xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.javafxregistrationform2.RegistrationControllerTask1">
+
+    <children>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints prefWidth="279"/>
+                <ColumnConstraints prefWidth="321"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints prefHeight="30"/>
+                <RowConstraints prefHeight="30"/>
+                <RowConstraints prefHeight="30"/>
+            </rowConstraints>
+            <children>
+                <Label text="Name" />
+                <TextField fx:id="nameField" GridPane.columnIndex="1" />
+
+                <Label text="Email" GridPane.rowIndex="1" />
+                <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Password" GridPane.rowIndex="2" />
+                <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+
+        <Label text="Gender" />
+        <RadioButton fx:id="maleRadio" text="Male" />
+        <RadioButton fx:id="femaleRadio" text="Female" />
+
+        <Label text="Country" />
+        <ComboBox fx:id="countryCombo" prefWidth="150.0" promptText="Select a country" />
+
+        <Button fx:id="registerButton" text="Register" onAction="#handleRegister" prefWidth="600" />
+    </children>
+</VBox>

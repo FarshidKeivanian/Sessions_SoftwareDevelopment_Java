@@ -1,18 +1,32 @@
-package com.university.management;
+package com.example.javafxradiobuttondemoweek4;
 
-public class Main {
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+    @Override
+    public void start(Stage primaryStage) {
+        RadioButton male = new RadioButton("Male");
+        RadioButton female = new RadioButton("Female");
+
+        ToggleGroup genderGroup = new ToggleGroup();
+        male.setToggleGroup(genderGroup);
+        female.setToggleGroup(genderGroup);
+
+        VBox root = new VBox(10); // 10 px spacing
+        root.getChildren().addAll(male, female);
+
+        Scene scene = new Scene(root, 300, 200);
+        primaryStage.setTitle("Gender Selection");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
     public static void main(String[] args) {
-        // Create a new Student object
-        String[] courses = {"COMP101", "MATH102", "ENG103"};
-        Student student1 = new Student("Alice Smith", "U1234567", courses);
-
-        // Test the methods of the Student class
-        student1.registerForCourse("HIST201");
-        student1.viewGrades();
-        student1.updateProfile("Alice Johnson");
-
-        // Output the current state of the student object
-        System.out.println("Student Name: " + student1.getName());
-        System.out.println("Student ID: " + student1.getStudentID());
+        launch(args);
     }
 }

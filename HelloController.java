@@ -1,4 +1,4 @@
-package com.example.javafxregistrationform;
+package com.example.javafxradiobuttondemoweek4;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

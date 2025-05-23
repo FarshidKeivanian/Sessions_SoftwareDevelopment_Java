@@ -31,7 +31,7 @@ public class StudentFormController {
         String course = courseField.getText();
 
         try (Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/schooldb", "root", "Fk38001466_")) {
+                "jdbc:mysql://localhost:3306/schooldb", "root", "YourPassword")) {
 
             String sql = "INSERT INTO students2(name, email, course) VALUES (?, ?, ?)";
             PreparedStatement stmt = conn.prepareStatement(sql);
